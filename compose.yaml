@@ -1,0 +1,65 @@
+name: ecommerce-analytics
+x-aws: &aws
+  AWS_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: ${LOCALSTACK_ACCESS_KEY_ID:-localstack}
+  AWS_SECRET_ACCESS_KEY: ${LOCALSTACK_SECRET_ACCESS_KEY:-localstack}
+  AWS_EC2_METADATA_DISABLED: "true"
+  KINESIS_ENDPOINT: http://localstack:4566
+  DYNAMODB_ENDPOINT: http://localstack:4566
+  KINESIS_STREAM: local-commerce-events
+  ANALYTICS_TABLE: local-analytics
+  PROCESSED_TABLE: local-processed-events
+  QUARANTINE_TABLE: local-quarantine
+  DATASET_ID: local-v1
+  KCL_APPLICATION: local-commerce-analytics
+  KCL_LEASE_TABLE: local-kcl-leases
+  KCL_WORKER_METRICS_TABLE: local-kcl-worker-metrics
+  KCL_COORDINATOR_TABLE: local-kcl-coordinator
+  CLOUDWATCH_METRICS: "false"
+  KCL_WORKER_METRIC: LINUX_CPU
+  SERVER_ADDRESS: 0.0.0.0
+services:
+  localstack:
+    image: localstack/localstack:4.14.0@sha256:3ebc37595918b8accb852f8048fef2aff047d465167edd655528065b07bc364a
+    ports: ["127.0.0.1:4566:4566"]
+    environment:
+      <<: *aws
+      SERVICES: kinesis,dynamodb
+      PERSISTENCE: "1"
+    volumes:
+      - localstack-data:/var/lib/localstack
+      - ./local/init.sh:/etc/localstack/init/ready.d/init.sh:ro
+      - ./local/init.py:/opt/ecommerce/init.py:ro
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /tmp/ecommerce-initialized"]
+      interval: 5s
+      timeout: 2s
+      retries: 30
+  ingestion-service:
+    build:
+      context: .
+      dockerfile: services/ingestion-service/Dockerfile
+    environment: *aws
+    ports: ["127.0.0.1:8081:8081"]
+    depends_on:
+      localstack: {condition: service_healthy}
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    stop_grace_period: 30s
+  analytics-service:
+    build:
+      context: .
+      dockerfile: services/analytics-service/Dockerfile
+    environment: *aws
+    ports: ["127.0.0.1:8082:8082"]
+    depends_on:
+      localstack: {condition: service_healthy}
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    stop_grace_period: 30s
+volumes:
+  localstack-data:

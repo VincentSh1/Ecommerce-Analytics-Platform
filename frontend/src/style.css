@@ -1,0 +1,72 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #202c38;
+  background: #f4f5f6;
+  font-synthesis: none;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1180px; margin: 0 auto; padding: 40px 28px; }
+h1 { font-size: 2rem; letter-spacing: -0.04em; line-height: 1.2; margin: 5px 0 10px; }
+h2 { font-size: 1.05rem; margin: 0; }
+h3 { font-size: 1rem; margin: 0 0 6px; }
+p { margin: 0 0 14px; }
+.eyebrow { font-size: .8rem; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; color: #46586b; margin: 0; }
+.intro, .note, .window, footer, .refresh-line { color: #526171; }
+.page-header { display: flex; align-items: start; justify-content: space-between; gap: 24px; }
+.controls { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+label { grid-column: 1 / -1; font-size: .85rem; font-weight: 600; }
+select, button { font: inherit; font-size: .88rem; border: 1px solid #8795a4; border-radius: 4px; min-height: 42px; padding: 8px 12px; }
+select { background: white; color: inherit; max-width: 100%; }
+button { background: #223e53; color: white; cursor: pointer; }
+button:hover:not(:disabled) { background: #152b3c; }
+button:disabled { background: #e0e5ea; color: #526171; cursor: default; }
+:focus-visible { outline: 3px solid #176cb6; outline-offset: 3px; }
+.refresh-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; font-size: .8rem; margin: 20px 0; padding-top: 16px; border-top: 1px solid #ccd3da; }
+.refresh-line p { margin: 0; }
+.layout { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(240px, 1fr); gap: 24px; align-items: start; }
+.analytics, aside { border: 1px solid #d3d9df; background: white; border-radius: 5px; padding: 24px; min-width: 0; }
+.section-heading { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.badge { background: #edf1f4; border: 1px solid #d3d9df; border-radius: 3px; padding: 2px 7px; font-size: .72rem; }
+.stale { color: #843808; background: #fff4e5; border-color: #c8a576; }
+.window { font-size: .8rem; margin: 16px 0 0; }
+.revenue { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 26px 0 30px; }
+dt { font-size: .82rem; color: #526171; }
+dd { margin: 7px 0 0; font-size: 1.45rem; font-weight: 650; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.revenue div:first-child dd { color: #174e44; }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+caption { text-align: left; font-weight: 650; margin-bottom: 10px; }
+th, td { border-top: 1px solid #dce1e6; padding: 12px 0; vertical-align: top; }
+th { text-align: left; font-weight: 450; width: 50%; padding-right: 16px; }
+td { text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.note, aside p { font-size: .82rem; }
+.note { margin-top: 16px; margin-bottom: 0; }
+aside h2 { margin-bottom: 12px; }
+aside p { margin-bottom: 12px; }
+.health { font-size: 1.1rem; font-weight: 650; }
+.ready { color: #14604a; }
+.unavailable { color: #80421a; }
+hr { border: 0; border-top: 1px solid #dce1e6; margin: 24px 0; }
+.error { background: #fff4ed; border: 1px solid #c79170; border-left: 4px solid #a44916; border-radius: 4px; padding: 18px 20px; margin-bottom: 20px; }
+.error h2 { margin-bottom: 8px; }
+.error p { margin-bottom: 6px; font-size: .88rem; }
+.technical { overflow-wrap: anywhere; font-family: ui-monospace, monospace; }
+.empty { border-left: 3px solid #7a8e9e; background: #f4f6f8; padding: 16px; margin: 20px 0; }
+.empty p { font-size: .85rem; margin: 0; }
+.placeholder { padding: 38px 0; color: #526171; }
+footer { margin-top: 24px; font-size: .75rem; }
+@media (max-width: 800px) {
+  main { padding: 24px 18px; }
+  .page-header { flex-direction: column; }
+  .layout { grid-template-columns: 1fr; }
+  .controls { width: 100%; }
+}
+@media (max-width: 440px) {
+  .analytics, aside { padding: 18px; }
+  .revenue { grid-template-columns: 1fr; gap: 18px; }
+  dd { margin-top: 2px; }
+  .controls { grid-template-columns: 1fr; }
+  .refresh-line { display: block; }
+  .refresh-line p + p { margin-top: 8px; }
+}

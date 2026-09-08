@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+**/target/
+**/__pycache__/
+*.log
+**/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/

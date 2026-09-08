@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+**/target
+**/__pycache__
+.DS_Store
+docs
+*.pem
+*.key
+frontend
