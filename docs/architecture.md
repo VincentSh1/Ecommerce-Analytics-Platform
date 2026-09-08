@@ -1,6 +1,6 @@
 # Architecture
 
-This document remains the architecture specification. Phase 1 implements the local ingestion → Kinesis/KCL → DynamoDB → summary slice. The dashboard, remaining query endpoints, cloud deployment, and benchmark remain planned. See [local backend](local-backend.md) for commands and verification boundaries.
+This document remains the architecture specification. Phase 1 implements the local ingestion → Kinesis/KCL → DynamoDB → summary slice. Phase 2 implements the local React/TypeScript summary dashboard and readiness display. Phase 3 implements locally validated Terraform AWS configuration; actual cloud deployment is NOT DEPLOYED. Remaining query endpoints and the benchmark remain planned. See [local backend](local-backend.md) for commands and verification boundaries.
 
 ```mermaid
 flowchart LR
@@ -18,7 +18,7 @@ flowchart LR
 
 The Ingestion Service validates the [event contract](event-model.md), publishes to Kinesis, and reports whether AWS acknowledged the write. It never computes analytics or writes DynamoDB. The Analytics Service owns KCL consumption, deduplication, aggregates, quarantine, recent-event storage, and query APIs. Its HTTP server and consumer run in the same deployment; bounded separate executor pools prevent one from taking all threads. This is a deliberate coupling, not a third service hidden in the design.
 
-The dashboard shows gross/refund/net revenue, payment count, average order value, refund event ratio, category and regional payment distributions, and recently processed events. It labels event-time activity separately from processing throughput. CloudWatch supplies operator-level errors and lag; the UI does not pretend that a successful query proves the stream is caught up. See [API](api-contract.md), [storage](dynamodb-access-patterns.md), [deployment](deployment-plan.md), and [security](security.md).
+The implemented dashboard shows gross/refund/net revenue, payment count, average order value, refund event ratio, event-time activity, and Analytics Service readiness. Category/regional distributions and recently processed events remain planned until their query endpoints exist. It labels event-time activity separately from processing throughput. CloudWatch supplies operator-level errors and lag; the UI does not pretend that a successful query proves the stream is caught up. See [API](api-contract.md), [storage](dynamodb-access-patterns.md), [deployment](deployment-plan.md), and [security](security.md).
 
 MVP non-goals: payment processing, real customer information, an authentication platform, recommendations, machine learning, generative AI, shopping carts, a product catalog, fulfillment, notifications, Kafka, Kubernetes, service mesh, additional microservices, GraphQL, and event-sourcing or CQRS frameworks. No historical warehouse, arbitrary SQL, order lifecycle enforcement, or currency conversion.
 

@@ -21,6 +21,13 @@ for path in files:
     relative = path.relative_to(root)
     if path.name == ".env" or (path.name.startswith(".env.") and path.name != ".env.example"):
         errors.append(f"{relative}: environment file included in repository")
+    if (
+        ".terraform" in relative.parts
+        or path.suffix in {".tfstate", ".tfplan", ".tfvars"}
+        or ".tfstate." in path.name
+        or path.name.endswith(".tfvars.json")
+    ):
+        errors.append(f"{relative}: Terraform state, plan, or private input file included in repository")
     text = path.read_text()
     for pattern in patterns:
         if re.search(pattern, text):

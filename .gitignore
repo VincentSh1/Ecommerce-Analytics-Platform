@@ -11,3 +11,11 @@
 frontend/dist/
 frontend/test-results/
 frontend/playwright-report/
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log

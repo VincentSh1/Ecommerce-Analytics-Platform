@@ -1,6 +1,6 @@
 # Local backend: Phase 1
 
-The implemented slice is POST `/api/v1/events` → Kinesis → KCL → DynamoDB → GET `/api/v1/analytics/summary`. Recent facts and category/region aggregates are written by the same transaction, but their query endpoints are not implemented. There is no frontend, authentication, AWS deployment, or throughput result.
+The implemented slice is POST `/api/v1/events` → Kinesis → KCL → DynamoDB → GET `/api/v1/analytics/summary`. Recent facts and category/region aggregates are written by the same transaction, but their query endpoints are not implemented. The [Phase 2 dashboard](local-frontend.md) reads the summary and readiness APIs. There is no authentication, AWS deployment, or throughput result.
 
 ## Prerequisites and startup
 

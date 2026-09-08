@@ -1,0 +1,9 @@
+# Documentation values only. Copy to an ignored .tfvars file and supply real deployment inputs later.
+aws_region         = "us-east-1"
+availability_zones = ["us-east-1a", "us-east-1b"]
+operator_cidrs     = ["198.51.100.10/32"] # RFC 5737 documentation address; replace before any deployment.
+api_hostname       = "analytics.example.com"
+# api_certificate_arn = supply the issued ACM certificate ARN in the chosen region
+# image_digests = supply actual ingestion and analytics digests after their ECR publication
+# Bootstrap stage creates paid infrastructure, even with no running ECS services.
+enable_services = false

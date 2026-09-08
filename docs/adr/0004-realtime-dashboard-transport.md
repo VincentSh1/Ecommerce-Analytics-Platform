@@ -1,6 +1,6 @@
 # ADR 0004: Poll the analytics API
 
-Status: accepted for implementation; not implemented.
+Status: implemented locally in Phase 2 for summary and readiness.
 
 ## Context
 

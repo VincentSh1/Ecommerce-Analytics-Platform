@@ -32,6 +32,17 @@ async function mount() { await act(async () => { render(<Dashboard />); }); }
 async function tick(ms: number) { await act(async () => { await vi.advanceTimersByTimeAsync(ms); }); }
 
 describe('dashboard', () => {
+  it('omits private readiness requests and the panel when configured for cloud hosting', async () => {
+    vi.stubEnv('VITE_READINESS_ENABLED', 'false');
+    await mount();
+    expect(calls).toHaveBeenCalledTimes(1);
+    expect(screen.queryByText('Backend readiness')).not.toBeInTheDocument();
+    expect(screen.getByTestId('net-revenue')).toHaveTextContent('$75.00');
+    await tick(10000);
+    expect(calls).toHaveBeenCalledTimes(2);
+    expect(calls.mock.calls.every(([url]) => url.includes('/analytics/summary'))).toBe(true);
+  });
+
   it('renders real response fields with correct labels and minute-aligned parameters', async () => {
     await mount();
     expect(screen.getByTestId('net-revenue')).toHaveTextContent('$75.00');

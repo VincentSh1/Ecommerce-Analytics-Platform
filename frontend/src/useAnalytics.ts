@@ -4,6 +4,7 @@ import { ApiFailure, completeWindow, getReadiness, getSummary, type Readiness, t
 type Result<T> = { value?: T; error?: ApiFailure; checkedAt?: string };
 
 export function useAnalytics(minutes: number) {
+  const readinessEnabled = import.meta.env.VITE_READINESS_ENABLED !== 'false';
   const [summary, setSummary] = useState<Result<Summary>>({});
   const [health, setHealth] = useState<Result<Readiness>>({});
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,7 @@ export function useAnalytics(minutes: number) {
       }
       await Promise.all([
         update(getSummary(window, current.signal), setSummary),
-        update(getReadiness(current.signal), setHealth),
+        ...(readinessEnabled ? [update(getReadiness(current.signal), setHealth)] : []),
       ]);
       if (!active) return;
       inFlight = false;
@@ -74,7 +75,7 @@ export function useAnalytics(minutes: number) {
       controller?.abort();
       document.removeEventListener('visibilitychange', visibility);
     };
-  }, [minutes]);
+  }, [minutes, readinessEnabled]);
 
-  return { summary, health, loading, paused, retryDelay, refresh: () => refresh.current() };
+  return { summary, health, loading, paused, retryDelay, readinessEnabled, refresh: () => refresh.current() };
 }

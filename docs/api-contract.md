@@ -1,6 +1,6 @@
 # REST API contract
 
-Phase 1 implements POST `/api/v1/events`, GET `/api/v1/analytics/summary`, and both services’ health groups. The revenue/category/region/recent query endpoints and dashboard transport below remain planned; recent items are already written atomically.
+Phase 1 implements POST `/api/v1/events`, GET `/api/v1/analytics/summary`, and both services’ health groups. Phase 2 implements dashboard polling for summary and local Analytics Service readiness. The revenue/category/region/recent query endpoints remain planned; recent items are already written atomically.
 
 All application paths use `/api/v1`. JSON request/response media type is `application/json`. Ingestion and query routes belong to different services even when one load balancer exposes them. No public debugging or mutation endpoints beyond ingestion. Examples are response shapes, not observed results.
 

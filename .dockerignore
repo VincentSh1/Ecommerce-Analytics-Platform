@@ -8,3 +8,5 @@ docs
 *.pem
 *.key
 frontend
+infra
+.github

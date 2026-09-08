@@ -6,7 +6,7 @@ function utc(value: string) { return value.replace('T', ' ').replace('.000Z', ' 
 
 export function Dashboard() {
   const [minutes, setMinutes] = useState(15);
-  const { summary, health, loading, paused, retryDelay, refresh } = useAnalytics(minutes);
+  const { summary, health, loading, paused, retryDelay, readinessEnabled, refresh } = useAnalytics(minutes);
   const result = summary.value;
   const data = result?.data;
   const status = health.error ? 'Unavailable' : health.value?.status === 'UP' ? 'Ready'
@@ -72,7 +72,8 @@ export function Dashboard() {
         </>}
       </section>
 
-      <aside aria-labelledby="health-heading">
+      <aside aria-label="Operational context">
+        {readinessEnabled && <>
         <h2 id="health-heading">Backend readiness</h2>
         <p>Analytics Service</p>
         <p className={`health ${status === 'Ready' ? 'ready' : 'unavailable'}`} role="status">{status}</p>
@@ -80,6 +81,7 @@ export function Dashboard() {
         {health.checkedAt && <p className="note">Last successful check:<br /><time dateTime={health.checkedAt}>{utc(health.checkedAt)}</time></p>}
         <p className="note">Readiness checks the scheduler and its dependencies. It does not prove the consumer is caught up. Stream lag is not exposed by this API.</p>
         <hr />
+        </>}
         <h2>Reading these metrics</h2>
         <p>Totals use event occurrence time, not ingestion or processing time. Late events can change a previous window.</p>
         <p>Completed payments count unique payment facts, not independently verified orders. Refund ratio is window activity, not a cohort refund rate, and can exceed one.</p>

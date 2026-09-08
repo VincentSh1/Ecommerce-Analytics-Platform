@@ -44,6 +44,10 @@ Preserve manifest, raw machine-readable interval data, command/configuration, re
 
 ## Implementation sequence and gates
 
-Phase 1 implements the smallest local vertical slice: strict v1 validation and ingestion acknowledgement semantics, one KCL consumer with the five-action transaction, and the summary query. Duplicate/replay-after-commit tests and durable quarantine are implemented. Before dashboard or cloud work, extend the small smoke fixture into the generator's deterministic correctness fixture, then implement the remaining specified queries and operational controls. Lock dependency versions and local emulation compatibility during this work.
+Phase 1 implements the smallest local vertical slice: strict v1 validation and ingestion acknowledgement semantics, one KCL consumer with the five-action transaction, and the summary query. Duplicate/replay-after-commit tests and durable quarantine are implemented. Phase 2 implements the dashboard against existing summary/readiness APIs, with frontend tests described in [local frontend](local-frontend.md). The deterministic generator fixture, remaining specified queries, and operational controls are later work. Lock dependency versions and local emulation compatibility during this work.
 
 Before deployment, run unit/API/local correctness tests, dependency and secret scans, and image checks. Before a performance claim, run disposable AWS correctness tests and the reproducible benchmark with saved evidence. No benchmark requirement authorizes cloud resources in Phase 0.
+
+## Infrastructure validation
+
+Phase 3 runs Terraform fmt, init with backend disabled, and validate without AWS credentials; a manual GitHub workflow repeats these checks. The AWS provider lockfile covers macOS ARM64 and Linux AMD64. Both backend production Docker builds and frontend builds are checked locally. The cloud-build readiness switch has a component test proving that it suppresses Actuator requests. No plan, apply, image push, live IAM validation, or AWS deployment test is claimed. See the [runbook](../infra/README.md) for future cloud acceptance checks and state/cost prerequisites.
