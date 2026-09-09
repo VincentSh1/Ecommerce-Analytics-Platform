@@ -1,0 +1,16 @@
+name: ecommerce-benchmark
+services:
+  localstack:
+    extends: {file: ../compose.yaml, service: localstack}
+    ports: !override ["127.0.0.1:14566:4566"]
+    volumes:
+      - ../scripts/benchmark.py:/opt/ecommerce/benchmark.py:ro
+      - ../benchmarks/results:/results
+  ingestion-service:
+    extends: {file: ../compose.yaml, service: ingestion-service}
+    ports: !override ["127.0.0.1:18081:8081"]
+  analytics-service:
+    extends: {file: ../compose.yaml, service: analytics-service}
+    ports: !override ["127.0.0.1:18082:8082"]
+volumes:
+  localstack-data:

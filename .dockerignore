@@ -10,3 +10,4 @@ docs
 frontend
 infra
 .github
+benchmarks/
