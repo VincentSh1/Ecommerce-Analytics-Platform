@@ -1,0 +1,27 @@
+{
+  "planned": 400,
+  "attempted": 400,
+  "skipped": 0,
+  "accepted": 393,
+  "statuses": {
+    "202": 393,
+    "0": 7
+  },
+  "errors": {
+    "BrokenPipeError": 7
+  },
+  "processedAtLoadEnd": 384,
+  "processedAfterDrain": 393,
+  "backlogAtLoadEnd": 9,
+  "loadSeconds": 20.008103414000004,
+  "totalSeconds": 30.23524756500001,
+  "acceptedPerSecond": 19.64204162024729,
+  "processedPerSecondDuringLoad": 19.192223873218726,
+  "processedPerSecondIncludingDrain": 12.998074487570344,
+  "errorRate": 0.0175,
+  "latencyMs": {
+    "p50": 16.06571199999962,
+    "p95": 128.88575099998434,
+    "p99": 226.82792899996684
+  }
+}

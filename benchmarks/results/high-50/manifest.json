@@ -1,0 +1,22 @@
+{
+  "name": "high-50",
+  "rate": 50.0,
+  "duration": 60.0,
+  "count": null,
+  "concurrency": 16,
+  "warmup": 20.0,
+  "drain": 600,
+  "seed": "high-50",
+  "occurredAt": "2026-09-09T01:23:00.000Z",
+  "startedAt": "2026-09-09T01:24:57.102Z",
+  "generator": "sha256(seed:index:kind), first 16 bytes with UUID v4 bits",
+  "dataset": "local-v1",
+  "tables": {
+    "aggregates": "local-analytics",
+    "processed": "local-processed-events",
+    "quarantine": "local-quarantine"
+  },
+  "samplingSeconds": 5,
+  "httpTimeoutSeconds": 8,
+  "httpRetries": 0
+}

@@ -1,0 +1,22 @@
+{
+  "name": "baseline-5",
+  "rate": 5.0,
+  "duration": 60.0,
+  "count": null,
+  "concurrency": 16,
+  "warmup": 20.0,
+  "drain": 600,
+  "seed": "baseline-5",
+  "occurredAt": "2026-09-08T22:32:00.000Z",
+  "startedAt": "2026-09-08T22:33:48.478Z",
+  "generator": "sha256(seed:index:kind), first 16 bytes with UUID v4 bits",
+  "dataset": "local-v1",
+  "tables": {
+    "aggregates": "local-analytics",
+    "processed": "local-processed-events",
+    "quarantine": "local-quarantine"
+  },
+  "samplingSeconds": 5,
+  "httpTimeoutSeconds": 8,
+  "httpRetries": 0
+}

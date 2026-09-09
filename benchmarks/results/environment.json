@@ -1,0 +1,67 @@
+{
+  "revision": "74cd233c7f49a20194e207619002dfd03e382776",
+  "host": "macOS-15.3.1-arm64-arm-64bit",
+  "vm": {
+    "cpus": 4,
+    "memoryBytes": 6197440512,
+    "architecture": "aarch64",
+    "kernel": "6.8.0-117-generic"
+  },
+  "containers": [
+    {
+      "name": "/ecommerce-benchmark-localstack-1",
+      "image": "localstack/localstack:4.14.0@sha256:3ebc37595918b8accb852f8048fef2aff047d465167edd655528065b07bc364a",
+      "imageId": "sha256:3ebc37595918b8accb852f8048fef2aff047d465167edd655528065b07bc364a",
+      "memoryLimit": 0,
+      "nanoCpus": 0,
+      "environment": {
+        "CLOUDWATCH_METRICS": "false",
+        "KCL_WORKER_METRIC": "LINUX_CPU",
+        "SERVICES": "kinesis,dynamodb",
+        "KCL_COORDINATOR_TABLE": "local-kcl-coordinator",
+        "AWS_REGION": "us-east-1",
+        "DATASET_ID": "local-v1",
+        "KCL_APPLICATION": "local-commerce-analytics",
+        "PERSISTENCE": "1",
+        "KCL_LEASE_TABLE": "local-kcl-leases",
+        "KCL_WORKER_METRICS_TABLE": "local-kcl-worker-metrics"
+      }
+    },
+    {
+      "name": "/ecommerce-benchmark-ingestion-service-1",
+      "image": "ecommerce-benchmark-ingestion-service",
+      "imageId": "sha256:b579f7364e6c67038b11147e3da3d16a34e041b7766454160fb9454fb4723b34",
+      "memoryLimit": 0,
+      "nanoCpus": 0,
+      "environment": {
+        "KCL_WORKER_METRICS_TABLE": "local-kcl-worker-metrics",
+        "KCL_COORDINATOR_TABLE": "local-kcl-coordinator",
+        "KCL_APPLICATION": "local-commerce-analytics",
+        "DATASET_ID": "local-v1",
+        "KCL_WORKER_METRIC": "LINUX_CPU",
+        "CLOUDWATCH_METRICS": "false",
+        "AWS_REGION": "us-east-1",
+        "KCL_LEASE_TABLE": "local-kcl-leases",
+        "JAVA_TOOL_OPTIONS": "-XX:MaxRAMPercentage=70 -XX:+ExitOnOutOfMemoryError"
+      }
+    },
+    {
+      "name": "/ecommerce-benchmark-analytics-service-1",
+      "image": "ecommerce-benchmark-analytics-service",
+      "imageId": "sha256:93ede1d9b3570ae1410c0b9040601c398ccf5810f5d5fad255b1bce40c740576",
+      "memoryLimit": 0,
+      "nanoCpus": 0,
+      "environment": {
+        "DATASET_ID": "local-v1",
+        "KCL_WORKER_METRIC": "LINUX_CPU",
+        "KCL_COORDINATOR_TABLE": "local-kcl-coordinator",
+        "KCL_LEASE_TABLE": "local-kcl-leases",
+        "KCL_WORKER_METRICS_TABLE": "local-kcl-worker-metrics",
+        "KCL_APPLICATION": "local-commerce-analytics",
+        "AWS_REGION": "us-east-1",
+        "CLOUDWATCH_METRICS": "false",
+        "JAVA_TOOL_OPTIONS": "-XX:MaxRAMPercentage=70 -XX:+ExitOnOutOfMemoryError"
+      }
+    }
+  ]
+}

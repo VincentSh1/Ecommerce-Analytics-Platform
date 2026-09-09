@@ -1,0 +1,45 @@
+{
+  "startedAt": "2026-09-09T01:36:13.090Z",
+  "clockContinuous": true,
+  "wallSeconds": 63.864053,
+  "planned": 3000,
+  "attempted": 2889,
+  "skipped": 111,
+  "accepted": 2825,
+  "statuses": {
+    "202": 2825,
+    "503": 64
+  },
+  "errors": {
+    "DEPENDENCY_UNAVAILABLE": 64
+  },
+  "processedAtLoadEnd": 2803,
+  "processedAfterDrain": 2889,
+  "backlogAtLoadEnd": 22,
+  "loadSeconds": 63.863744722999854,
+  "totalSeconds": 74.40647660400009,
+  "acceptedPerSecond": 44.234800390316074,
+  "processedPerSecondDuringLoad": 43.890316989046354,
+  "processedPerSecondIncludingDrain": 38.82726520401703,
+  "errorRate": 0.02215299411561094,
+  "latencyMs": {
+    "p50": 44.12398599970402,
+    "p95": 1605.352490000314,
+    "p99": 5009.3835370003035
+  },
+  "reconciliation": {
+    "markers": 2889,
+    "missingAccepted": 0,
+    "unexpectedIds": 0,
+    "ambiguousProcessed": 64,
+    "aggregatesMatch": true,
+    "recentMatch": true,
+    "newQuarantine": 0
+  },
+  "duplicateCheck": {
+    "sent": 10,
+    "accepted": 10,
+    "unchanged": true
+  },
+  "correct": true
+}

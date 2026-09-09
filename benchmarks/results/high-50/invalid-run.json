@@ -1,0 +1,9 @@
+{
+  "validPerformanceRun": false,
+  "reason": "LocalStack arrival clock lagged wall time after host suspension; warmup entered INVALID_EVENT quarantine",
+  "observedAt": "2026-09-09T01:29:13.293188Z",
+  "arrivalSample": "2026-09-08T23:02:39.895Z",
+  "occurredAtSample": "2026-09-09T01:22:00.000Z",
+  "abortedDuringDrain": true,
+  "httpResultsNotFlushed": true
+}

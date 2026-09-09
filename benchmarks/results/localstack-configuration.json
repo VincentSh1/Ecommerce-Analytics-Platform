@@ -1,0 +1,48 @@
+{
+  "OpenShardCount": 1,
+  "RetentionPeriodHours": 24,
+  "StreamModeDetails": {
+    "StreamMode": "PROVISIONED"
+  },
+  "tables": {
+    "local-analytics": {
+      "keys": [
+        {
+          "AttributeName": "PK",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "SK",
+          "KeyType": "RANGE"
+        }
+      ],
+      "billingMode": "PAY_PER_REQUEST"
+    },
+    "local-processed-events": {
+      "keys": [
+        {
+          "AttributeName": "PK",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "SK",
+          "KeyType": "RANGE"
+        }
+      ],
+      "billingMode": "PAY_PER_REQUEST"
+    },
+    "local-quarantine": {
+      "keys": [
+        {
+          "AttributeName": "PK",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "SK",
+          "KeyType": "RANGE"
+        }
+      ],
+      "billingMode": "PAY_PER_REQUEST"
+    }
+  }
+}

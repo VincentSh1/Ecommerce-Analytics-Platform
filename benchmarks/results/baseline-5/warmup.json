@@ -1,0 +1,24 @@
+{
+  "planned": 100,
+  "attempted": 100,
+  "skipped": 0,
+  "accepted": 100,
+  "statuses": {
+    "202": 100
+  },
+  "errors": {},
+  "processedAtLoadEnd": 98,
+  "processedAfterDrain": 100,
+  "backlogAtLoadEnd": 2,
+  "loadSeconds": 20.008464076999985,
+  "totalSeconds": 30.330601919999992,
+  "acceptedPerSecond": 4.997884875878675,
+  "processedPerSecondDuringLoad": 4.897927178361102,
+  "processedPerSecondIncludingDrain": 3.297000180337998,
+  "errorRate": 0.0,
+  "latencyMs": {
+    "p50": 38.68656700001338,
+    "p95": 147.60797100001355,
+    "p99": 208.66870500003643
+  }
+}

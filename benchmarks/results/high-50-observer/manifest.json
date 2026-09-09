@@ -1,0 +1,24 @@
+{
+  "name": "high-50-observer",
+  "rate": 50.0,
+  "duration": 60.0,
+  "count": null,
+  "concurrency": 64,
+  "warmup": 20.0,
+  "drain": 600,
+  "seed": "high-50-observer",
+  "occurredAt": "2026-09-09T01:37:00.000Z",
+  "startedAt": "2026-09-09T01:38:14.805Z",
+  "generator": "sha256(seed:index:kind), first 16 bytes with UUID v4 bits",
+  "harnessSha256": "fe7570a14342fbe35ddc227cc03500a56e2948204547fe4e44d816c32d5ed982",
+  "dataset": "local-v1",
+  "tables": {
+    "aggregates": "local-analytics",
+    "processed": "local-processed-events",
+    "quarantine": "local-quarantine"
+  },
+  "observer": "background-thread",
+  "samplingSeconds": 5,
+  "httpTimeoutSeconds": 8,
+  "httpRetries": 0
+}

@@ -1,0 +1,28 @@
+{
+  "startedAt": "2026-09-09T01:50:48.452Z",
+  "clockContinuous": true,
+  "wallSeconds": 20.702022,
+  "planned": 200,
+  "attempted": 200,
+  "skipped": 0,
+  "accepted": 200,
+  "statuses": {
+    "202": 200
+  },
+  "errors": {},
+  "processedAtLoadEnd": 198,
+  "processedAfterDrain": 200,
+  "backlogAtLoadEnd": 2,
+  "loadSeconds": 20.701554761999887,
+  "observationSeconds": 20.885008956000092,
+  "totalSeconds": 25.940401937999923,
+  "acceptedPerSecond": 9.66111010981278,
+  "processedPerSecondDuringLoad": 9.48048432333165,
+  "processedPerSecondIncludingDrain": 7.709980765834677,
+  "errorRate": 0.0,
+  "latencyMs": {
+    "p50": 32.282078999742225,
+    "p95": 1225.2884990002713,
+    "p99": 1895.5429729999196
+  }
+}

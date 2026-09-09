@@ -1,0 +1,27 @@
+[
+  {
+    "seconds": 5.242645970000012,
+    "processed": 108,
+    "accepted": 198
+  },
+  {
+    "seconds": 10.481413472999975,
+    "processed": 349,
+    "accepted": 466
+  },
+  {
+    "seconds": 15.650033358999735,
+    "processed": 662,
+    "accepted": 728
+  },
+  {
+    "seconds": 20.169887490999827,
+    "processed": 896,
+    "accepted": 950
+  },
+  {
+    "seconds": 25.40924964099986,
+    "processed": 950,
+    "accepted": 950
+  }
+]

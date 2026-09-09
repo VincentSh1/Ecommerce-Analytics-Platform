@@ -1,0 +1,24 @@
+{
+  "name": "sustained-10-a",
+  "rate": 10.0,
+  "duration": 180.0,
+  "count": null,
+  "concurrency": 64,
+  "warmup": 20.0,
+  "drain": 600,
+  "seed": "sustained-10-a",
+  "occurredAt": "2026-09-09T01:45:00.000Z",
+  "startedAt": "2026-09-09T01:46:42.087Z",
+  "generator": "sha256(seed:index:kind), first 16 bytes with UUID v4 bits",
+  "harnessSha256": "dfb95f0934231ea5c6082b1f97e1f6df0a35b02300fba7f3e68545cd6f132cc6",
+  "dataset": "local-v1",
+  "tables": {
+    "aggregates": "local-analytics",
+    "processed": "local-processed-events",
+    "quarantine": "local-quarantine"
+  },
+  "observer": "background-thread",
+  "samplingSeconds": 5,
+  "httpTimeoutSeconds": 8,
+  "httpRetries": 0
+}

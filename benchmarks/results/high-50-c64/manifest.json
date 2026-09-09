@@ -1,0 +1,23 @@
+{
+  "name": "high-50-c64",
+  "rate": 50.0,
+  "duration": 60.0,
+  "count": null,
+  "concurrency": 64,
+  "warmup": 20.0,
+  "drain": 600,
+  "seed": "high-50-c64",
+  "occurredAt": "2026-09-09T01:34:00.000Z",
+  "startedAt": "2026-09-09T01:35:40.291Z",
+  "generator": "sha256(seed:index:kind), first 16 bytes with UUID v4 bits",
+  "harnessSha256": "93e4471d74ae72b92e8696ed1e1f5dd0c70448566448268b0959af442632174e",
+  "dataset": "local-v1",
+  "tables": {
+    "aggregates": "local-analytics",
+    "processed": "local-processed-events",
+    "quarantine": "local-quarantine"
+  },
+  "samplingSeconds": 5,
+  "httpTimeoutSeconds": 8,
+  "httpRetries": 0
+}

@@ -1,0 +1,39 @@
+{
+  "planned": 300,
+  "attempted": 300,
+  "skipped": 0,
+  "accepted": 300,
+  "statuses": {
+    "202": 300
+  },
+  "errors": {},
+  "processedAtLoadEnd": 298,
+  "processedAfterDrain": 300,
+  "backlogAtLoadEnd": 2,
+  "loadSeconds": 60.00683194499999,
+  "totalSeconds": 70.25857121500002,
+  "acceptedPerSecond": 4.999430736069665,
+  "processedPerSecondDuringLoad": 4.966101197829201,
+  "processedPerSecondIncludingDrain": 4.269941657110596,
+  "errorRate": 0.0,
+  "latencyMs": {
+    "p50": 28.63264200004778,
+    "p95": 41.91639999999097,
+    "p99": 52.24143699996375
+  },
+  "reconciliation": {
+    "markers": 300,
+    "missingAccepted": 0,
+    "unexpectedIds": 0,
+    "ambiguousProcessed": 0,
+    "aggregatesMatch": true,
+    "recentMatch": true,
+    "newQuarantine": 0
+  },
+  "duplicateCheck": {
+    "sent": 10,
+    "accepted": 10,
+    "unchanged": true
+  },
+  "correct": true
+}

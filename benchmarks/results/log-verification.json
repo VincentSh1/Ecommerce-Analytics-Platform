@@ -1,0 +1,429 @@
+{
+  "applicationWarnings": [
+    {
+      "service": "analytics-service",
+      "message": "request_failed",
+      "failureClass": "NoResourceFoundException",
+      "count": 2
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 5a9f520c] PING timer scheduled after 20373ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 5a9f520c] PING timer scheduled after 10465ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T22:44:53.116633509Z, but no response as of 2026-09-08T22:46:13.825214964Z (PT1M20.708581455S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T22:46:33.097832758Z, but no response as of 2026-09-08T22:48:51.747696951Z (PT2M18.649864193S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 38346ad8] PING timer scheduled after 11545ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T22:54:12.236958724Z, but no response as of 2026-09-08T22:57:07.533371178Z (PT2M55.296412454S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T22:59:07.077421755Z, but no response as of 2026-09-08T23:03:49.269421754Z (PT4M42.191999999S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: ea4dfea7] PING timer scheduled after 389874ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T23:17:11.309718102Z, but no response as of 2026-09-08T23:23:39.512211960Z (PT6M28.202493858S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T23:31:56.642391665Z, but no response as of 2026-09-08T23:33:18.818930595Z (PT1M22.17653893S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T23:33:38.328286791Z, but no response as of 2026-09-08T23:39:54.758540536Z (PT6M16.430253745S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-08T23:40:03.049142469Z, but no response as of 2026-09-08T23:46:28.783943291Z (PT6M25.734800822S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 389973ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 234669ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 56170ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 9908ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 14590ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: cbe46c2a] PING timer scheduled after 8259ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 78df8e4a] PING timer scheduled after 10855ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: d35a7a73] PING timer scheduled after 63147ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 54d93fc1] PING timer scheduled after 48703ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 54d93fc1] PING timer scheduled after 16241ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 8967a597] PING timer scheduled after 10210ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-09T00:15:00.474667242Z, but no response as of 2026-09-09T00:20:03.139999986Z (PT5M2.665332744S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-09T00:20:15.338417527Z, but no response as of 2026-09-09T00:35:04.313296154Z (PT14M48.974878627S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 0df8a025] PING timer scheduled after 50822ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 0df8a025] PING timer scheduled after 8277ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 0df8a025] PING timer scheduled after 8639ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1311c22a] PING timer scheduled after 5622ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1311c22a] PING timer scheduled after 21945ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1311c22a] PING timer scheduled after 301695ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1311c22a] PING timer scheduled after 371437ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1d0064b9] PING timer scheduled after 16659ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 1d0064b9] PING timer scheduled after 5527ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: ee5839cb] PING timer scheduled after 23087ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-09T00:58:57.523386806Z, but no response as of 2026-09-09T01:04:15.939260704Z (PT5M18.415873898S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: f4dd7513] PING timer scheduled after 6489ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: f4dd7513] PING timer scheduled after 6486ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 11205ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 28856ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 6815ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 10021ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 14701ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: a0cec256] PING timer scheduled after 8450ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "shardId-000000000000: Last request was dispatched at 2026-09-09T01:07:30.694100796Z, but no response as of 2026-09-09T01:19:06.899857410Z (PT11M36.205756614S).  Cancelling subscription, and restarting. Last successful request details -- request id - NONE, timestamp - NONE",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 48814ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 107497ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 26750ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 32413ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 9268ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 6887ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 7298ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "[Channel: 49070054] PING timer scheduled after 50790ms",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.",
+      "failureClass": "",
+      "count": 3
+    },
+    {
+      "service": "analytics-service",
+      "message": "local-commerce-events:shardId-000000000000 :  Exception thrown while fetching records from Kinesis",
+      "failureClass": "",
+      "count": 2
+    },
+    {
+      "service": "analytics-service",
+      "message": "Encountered an exception while renewing a lease.",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "LeasingException encountered in lease renewing thread",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "analytics-service",
+      "message": "Failed to complete releaseLeadershipIfHeld call.",
+      "failureClass": "",
+      "count": 1
+    },
+    {
+      "service": "ingestion-service",
+      "message": "request_failed",
+      "failureClass": "NoResourceFoundException",
+      "count": 2
+    },
+    {
+      "service": "ingestion-service",
+      "message": "request_failed",
+      "failureClass": "ApiCallAttemptTimeoutException",
+      "count": 27
+    },
+    {
+      "service": "ingestion-service",
+      "message": "request_failed",
+      "failureClass": "ApiCallTimeoutException",
+      "count": 36
+    },
+    {
+      "service": "ingestion-service",
+      "message": "request_failed",
+      "failureClass": "SdkClientException",
+      "count": 1
+    }
+  ],
+  "runs": {
+    "baseline-5": {
+      "acceptedIds": 300,
+      "durableMarkerCountMatches": true,
+      "committedExactlyOnce": true,
+      "duplicateOutcomesObserved": true,
+      "firstCommit": 1788906859.672713,
+      "lastCommit": 1788906919.173606,
+      "meanInterCommitMs": 198.99964173103257
+    },
+    "high-50-c64": {
+      "acceptedIds": 2825,
+      "durableMarkerCountMatches": true,
+      "committedExactlyOnce": true,
+      "duplicateOutcomesObserved": true,
+      "firstCommit": 1788917773.528245,
+      "lastCommit": 1788917837.790529,
+      "meanInterCommitMs": 22.755766303275866
+    },
+    "high-50-observer": {
+      "acceptedIds": 2743,
+      "durableMarkerCountMatches": true,
+      "committedExactlyOnce": true,
+      "duplicateOutcomesObserved": true,
+      "firstCommit": 1788917931.458464,
+      "lastCommit": 1788917996.093916,
+      "meanInterCommitMs": 23.57237492052853
+    },
+    "high-50-resumed": {
+      "acceptedIds": 2836,
+      "durableMarkerCountMatches": true,
+      "committedExactlyOnce": true,
+      "duplicateOutcomesObserved": true,
+      "firstCommit": 1788917655.107738,
+      "lastCommit": 1788917714.812063,
+      "meanInterCommitMs": 21.059726617533904
+    },
+    "moderate-20": {
+      "acceptedIds": 1200,
+      "durableMarkerCountMatches": true,
+      "committedExactlyOnce": true,
+      "duplicateOutcomesObserved": true,
+      "firstCommit": 1788907288.134402,
+      "lastCommit": 1788907348.491306,
+      "meanInterCommitMs": 50.339369499454705
+    }
+  }
+}
